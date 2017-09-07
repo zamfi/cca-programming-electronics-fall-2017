@@ -21,7 +21,7 @@ Hands-on activities:
 
 In class, we discussed the four basic building blocks of code: actions & recipes, remembering, making decisions, and repetition. 
 
-<!-- [Here are some notes.](building-blocks.md) -->
+[Here are some notes.](building-blocks.md)
 
 #### Inspiration
 
@@ -59,4 +59,4 @@ Finally, here are some inspirational videos to get you excited for our class if 
 - Vacuuming
   - [Roomba](https://www.youtube.com/watch?v=0DNkbZvVYvc)
 
-<!-- [Homework for Week 1](hw/week1.md) -->
+[Homework for Week 1](hw/week1.md)
