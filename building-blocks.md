@@ -129,4 +129,8 @@ repeat if steps < 8
 | save steps + 1 as steps
 ```
 
+Each time through the loop, the red dot moves down **and** updates its memory by remembering that it has moved one additional step.
+
+Convince yourself that `down` runs exactly 8 times in the code above!
+
 Whew. That's all we did today! If you're stuck on anything, ask a fellow student or email [me](mailto:jzamfirescupereira@cca.edu) for help!
