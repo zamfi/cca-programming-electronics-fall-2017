@@ -1,8 +1,8 @@
 ## Building Blocks of Code
 
-In today's class, we explored the five building blocks of code: actions and recipes, remembering, making decisions (`if`s), and repetition (`repeat if`s).
+In today's class, we explored the five building blocks of code: actions and recipes, remembering, making decisions (`if`), and repetition (`repeat if`).
 
-A program consists of a list of actions and recipes; each action is run in sequence, but `if`s and `repeat if`s can modify the sequence locally.
+A program consists of a list of actions and recipes; each action is run in sequence, but `if` and `repeat if` can modify the sequence locally.
 
 ### Actions & Recipes
 
@@ -73,9 +73,9 @@ else
 | down
 ```
 
-This program tells the red dot to check if the current color is blue, and if it is to go `up`, but if it wasn't, go `down`. You can embed `if` statements in your program; just make sure to make it clear with a `line` what's part of the if and what isn't -- you can have as many actions as you want as part of the `if`
+This program tells the red dot to check if the current color is blue, and if it is to go `up`, but if it wasn't, go `down`. You can embed `if` statements in your program; just make sure to make it clear with a `line` what's part of the if and what isn't -- you can have as many actions as you want as part of the `if`.
 
-The `else` part is optional. The curly-brace characters, `{}`, enclose all the lines of code that are part of the **YES** or **NO** branches of the `if`.
+The `else` part is optional.
 
 Here another example:
 

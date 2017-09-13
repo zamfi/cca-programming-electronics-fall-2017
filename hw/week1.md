@@ -6,7 +6,7 @@ This homework has two parts; first, complete the exercises we began in class tod
 
 - First, [**read through the building blocks we covered**](../building-blocks.md) and make sure it all makes sense. If you have any questions about anything, [email me](mailto:jzamfirescupereira@cca.edu)!
 
-- Finish solving the [puzzles](/zamfi/cca-programming-electronics-fall-2017/raw/master/puzzle-sheets.pdf) we started in class.
+- Finish solving the [puzzles](../puzzle-sheets.pdf) we started in class. Remember, your goal is to give instructions to the red dot so that it passes over (collects) all the green dots.
 
 - Each page in that PDF contains one or more puzzles that should be solved by the same program; make sure each programs solves all the puzzles on its page.
 
