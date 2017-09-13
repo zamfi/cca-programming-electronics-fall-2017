@@ -4,7 +4,7 @@ This homework has two parts; first, complete the exercises we began in class tod
 
 #### Red Dot Puzzles (due Sunday)
 
-- First, [**read through the building blocks we covered**](../building-blocks.md) and make sure it all makes sense. If you have any questions about anything, [email me](mailto:jzamfirescupereira@cca.edu)!
+- First, [**read through the building blocks we covered**](../building-blocks-programs.md) and make sure it all makes sense. If you have any questions about anything, [email me](mailto:jzamfirescupereira@cca.edu)!
 
 - Finish solving the [puzzles](../puzzle-sheets.pdf) we started in class. Remember, your goal is to give instructions to the red dot so that it passes over (collects) all the green dots.
 

@@ -21,7 +21,7 @@ Hands-on activities:
 
 In class, we discussed the four basic building blocks of code: actions & recipes, remembering, making decisions, and repetition. 
 
-[Here are some notes.](building-blocks.md)
+[Here are some notes.](building-blocks-programs.md)
 
 #### Inspiration
 

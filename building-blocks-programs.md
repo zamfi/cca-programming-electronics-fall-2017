@@ -1,4 +1,4 @@
-## Building Blocks of Code
+## Building Blocks of Programs
 
 In today's class, we explored the five building blocks of code: actions and recipes, remembering, making decisions (`if`), and repetition (`repeat if`).
 
