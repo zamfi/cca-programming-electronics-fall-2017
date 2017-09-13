@@ -65,7 +65,6 @@ Finally, here are some inspirational videos to get you excited for our class if 
 
 In-class:
 - Homework review.
-- Translating "pseudo-code" into real code with [Rudy](http://rudy.zamfi.net); here are some notes on the [building blocks of code](building-blocks-code.md);
-- Drawing with code.
+- Translating "pseudo-code" into real code with [Rudy](http://rudy.zamfi.net); here are some notes on the [building blocks of code](building-blocks-code.md).
 
 [Homework for Week 2](hw/week2.md)
