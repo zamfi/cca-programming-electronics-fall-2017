@@ -63,7 +63,7 @@ else
 | down</pre>
       </td>
       <td>
-        <pre lang="javascript">if (getColor() == "blue") {
+        <pre lang="javascript">if (getColor() == "red") {
   up();
 } else {
   down();        
