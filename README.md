@@ -60,3 +60,10 @@ Finally, here are some inspirational videos to get you excited for our class if 
   - [Roomba](https://www.youtube.com/watch?v=0DNkbZvVYvc)
 
 [Homework for Week 1](hw/week1.md)
+
+### Week 2: Wednesday, September 13, 2017
+
+In-class:
+- Homework review.
+- Translating "pseudo-code" into real code with [Rudy](http://rudy.zamfi.net).
+- Drawing with code.
