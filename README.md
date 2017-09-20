@@ -85,8 +85,10 @@ Together, we'll experiment with a few sketches to practice variables:
      2. A random color. (Use HSB for nicer colors!)
 - [Color and HSB](http://p5js.zamfi.net/full/ByanCnHPx)
   - Working with a partner, modify this sketch so that it continuously changes color instead of stopping at red.
-- Class Quilt!
-    - Working with a partner, make two patches for the class quilt! Start with the following code:
+-   Class Quilt!
+
+    Working with a partner, make two patches for the class quilt! Start with the following code:
+
     ```javascript
     function yourQuilt(x, y) {
       noFill();
