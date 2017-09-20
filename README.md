@@ -68,3 +68,22 @@ In-class:
 - Translating "pseudo-code" into real code with [Rudy](http://rudy.zamfi.net); here are some notes on the [building blocks of code](building-blocks-code.md).
 
 [Homework for Week 2](hw/week2.md)
+
+### Week 3: Wednesday, September 20, 2017
+
+First, homework review. Then, a workshop.
+
+#### Workshop
+
+Together, we'll experiment with a few sketches to practice variables:
+
+- [A Single Ellipse](http://p5js.zamfi.net/jd/sketches/SkPx0nSPx)
+  - Working with a partner, modify this sketch to create an ellipse that extends past the edges of the canvas.
+- [Random Dots](http://p5js.zamfi.net/full/HJ6LyTBPx)
+  - Working with a partner, modify this sketch to give each ellipse:
+     1. A random size.
+     2. A random color. (Use HSB for nicer colors!)
+- [Color and HSB](http://p5js.zamfi.net/full/ByanCnHPx)
+  - Working with a partner, modify this sketch so that it continuously changes color instead of stopping at red.
+- [Nice Little House](http://p5js.zamfi.net/full/HJRrZprPe)
+  - Working with a partner, modify your house so that it is drawn at the location of your mouse, as you move the mouse. Use the `mouseX` and `mouseY` variables available to you in p5.js.
