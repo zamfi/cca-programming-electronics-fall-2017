@@ -105,11 +105,11 @@ Together, we'll experiment with a few sketches to practice variables:
     
     Modify the `yourQuilt` function, replacing `// your code here!` with drawing commands that draw inside the 100-by-100 pixel square. Use `x` and `y` to get yourself started -- all your shapes should appear within the rectangle bounded to the left by `x`, above by `y`, to the right by `x+100` and below by `y+100`. 
     
-    We'll then take all our functions and pattern them together into a quilt! Making your functions depend on `x` and `y` means that we can place them anywhere in the quilt by "passing in" the appropriate `x` and `y` coordinates for that place in the quilt.
+    We'll then take all our functions and pattern them together into a class quilt! Making your functions depend on `x` and `y` means that we can place them anywhere in the quilt by "passing in" the appropriate `x` and `y` coordinates for that place in the quilt.
     
-    Feel free to remove the border rectangle when you're done!
+    Feel free (but not compelled) to remove the border rectangle when you like what you have!
     
-    Here's a (pretty complicated) example that I came up with for myself:
+    Here's a (honestly, pretty complicated) example that I came up with for myself:
     
     ```javascript
     function jdQuilt(x, y) {
@@ -117,12 +117,14 @@ Together, we'll experiment with a few sketches to practice variables:
       stroke(238);
       rect(x, y, 100, 100);
       
+      // blocky J
       fill(238);
       noStroke();
       rect(x+20, y+20, 60, 20);
       rect(x+40, y+40, 20, 40);
       rect(x+20, y+60, 40, 20);
       
+      // overlay of lines
       stroke(0);
       var lines = 3;
       while (lines < 50) {
