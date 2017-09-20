@@ -90,7 +90,7 @@ Together, we'll experiment with a few sketches to practice variables:
     Working with a partner, make two patches for the class quilt! Start with the following code:
 
     ```javascript
-    function yourQuilt(x, y) {
+    function yourPatch(x, y) {
       noFill();
       stroke(238);
       rect(x, y, 100, 100);
@@ -100,19 +100,21 @@ Together, we'll experiment with a few sketches to practice variables:
     
     background(255);
     
-    yourQuilt((width-100)/2, (height-100)/2);
+    yourPatch((width-100)/2, (height-100)/2);
     ```
     
-    Modify the `yourQuilt` function, replacing `// your code here!` with drawing commands that draw inside the 100-by-100 pixel square. Use `x` and `y` to get yourself started -- all your shapes should appear within the rectangle bounded to the left by `x`, above by `y`, to the right by `x+100` and below by `y+100`. 
+    Modify the `yourPatch` function, replacing `// your code here!` with drawing commands that draw inside the 100-by-100 pixel square. Use `x` and `y` to get yourself started -- all your shapes should appear within the rectangle bounded to the left by `x`, above by `y`, to the right by `x+100` and below by `y+100`. 
     
     We'll then take all our functions and pattern them together into a class quilt! Making your functions depend on `x` and `y` means that we can place them anywhere in the quilt by "passing in" the appropriate `x` and `y` coordinates for that place in the quilt.
     
+    When you like what you have, change the call your `yourPatch` to draw your patch at `(0, 0)` and `(100, 100)` -- make sure your drawing moves along with the coorinates.
+    
     Feel free (but not compelled) to remove the border rectangle when you like what you have!
     
-    Here's a (honestly, pretty complicated) example that I came up with for myself:
+    Here's a (frankly, pretty complicated) example that I came up with for myself:
     
     ```javascript
-    function jdQuilt(x, y) {
+    function jdPatch(x, y) {
       noFill();
       stroke(238);
       rect(x, y, 100, 100);
