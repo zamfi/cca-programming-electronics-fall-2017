@@ -85,5 +85,63 @@ Together, we'll experiment with a few sketches to practice variables:
      2. A random color. (Use HSB for nicer colors!)
 - [Color and HSB](http://p5js.zamfi.net/full/ByanCnHPx)
   - Working with a partner, modify this sketch so that it continuously changes color instead of stopping at red.
-- [Nice Little House](http://p5js.zamfi.net/full/HJRrZprPe)
-  - Working with a partner, modify your house so that it is drawn at the location of your mouse, as you move the mouse. Use the `mouseX` and `mouseY` variables available to you in p5.js.
+- Class Quilt!
+    - Working with a partner, make two patches for the class quilt! Start with the following code:
+    ```javascript
+    function yourQuilt(x, y) {
+      noFill();
+      stroke(238);
+      rect(x, y, 100, 100);
+      
+      // your code here!
+    }
+    
+    background(255);
+    
+    yourQuilt((width-100)/2, (height-100)/2);
+    ```
+    
+    Modify the `yourQuilt` function, replacing `// your code here!` with drawing commands that draw inside the 100-by-100 pixel square. Use `x` and `y` to get yourself started -- all your shapes should appear within the rectangle bounded to the left by `x`, above by `y`, to the right by `x+100` and below by `y+100`. 
+    
+    We'll then take all our functions and pattern them together into a quilt! Making your functions depend on `x` and `y` means that we can place them anywhere in the quilt by "passing in" the appropriate `x` and `y` coordinates for that place in the quilt.
+    
+    Feel free to remove the border rectangle when you're done!
+    
+    Here's a (pretty complicated) example that I came up with for myself:
+    
+    ```javascript
+    function jdQuilt(x, y) {
+      noFill();
+      stroke(238);
+      rect(x, y, 100, 100);
+      
+      fill(238);
+      noStroke();
+      rect(x+20, y+20, 60, 20);
+      rect(x+40, y+40, 20, 40);
+      rect(x+20, y+60, 40, 20);
+      
+      stroke(0);
+      var lines = 3;
+      while (lines < 50) {
+        line(x+lines, y, x, y+lines);
+        lines = lines + 5;
+      }
+      stroke(200);
+      while (lines < 100) {
+        line(x+lines, y, x, y+lines);
+        lines = lines + 3;
+      }
+      stroke(255, 127, 0);
+      lines = 0;
+      while (lines < 50) {
+        line(x+100, y+lines, x+lines, y+100);
+        lines = lines + 4;
+      }
+      stroke(0, 64, 127);
+      while (lines < 100) {
+        line(x+100, y+lines, x+lines, y+100);
+        lines = lines + 4;
+      }
+    }
+    ```
