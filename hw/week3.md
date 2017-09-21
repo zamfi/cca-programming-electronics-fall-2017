@@ -32,9 +32,9 @@ As a reminder, **please email me if you get stuck!** I am on email more than is 
   
    ![single-circle](img/single-circle.gif)
 
-4. **Challenge**: Modify your single circle code from #3 above so that the circle bounces at the **right** edge of the canvas and reverses direction. *You may need an extra variable to keep track of the direction of the circle's motion!*
+4. Modify your single circle code from #3 above so that the circle bounces at the **right** edge of the canvas and reverses direction. *You may need an extra variable to keep track of the direction of the circle's motion, and you'll need an `if` too!*
   
-5. **Challenge**: Make the circle also bounce on the **left** side of the canvas.
+5. Make the circle also bounce on the **left** side of the canvas.
 
 #### Tutorial (due Tuesday)
 
