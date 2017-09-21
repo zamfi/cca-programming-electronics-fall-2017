@@ -75,7 +75,7 @@ First, homework review. Then, a workshop.
 
 #### Workshop
 
-Together, we'll experiment with a few sketches to practice variables:
+Together, we'll experiment with a few sketches to practice variables & functions:
 
 - [A Single Ellipse](http://p5js.zamfi.net/jd/sketches/SkPx0nSPx)
   - Working with a partner, modify this sketch to create an ellipse that extends past the edges of the canvas.
@@ -83,8 +83,10 @@ Together, we'll experiment with a few sketches to practice variables:
   - Working with a partner, modify this sketch to give each ellipse:
      1. A random size.
      2. A random color. (Use HSB for nicer colors!)
+  - Here's some code that accomplishes this: [random-dots.js](class-code/random-circles.js)
 - [Color and HSB](http://p5js.zamfi.net/full/ByanCnHPx)
   - Working with a partner, modify this sketch so that it continuously changes color instead of stopping at red.
+  - Here's the code we created together in class: [cycling-hue.js](class-code/cycling-hue.js)
 -   Class Quilt!
 
     Working with a partner, make two patches for the class quilt! Start with the following code:
@@ -151,3 +153,5 @@ Together, we'll experiment with a few sketches to practice variables:
       }
     }
     ```
+    
+[Homework for Week 3](hw/week3.md)
