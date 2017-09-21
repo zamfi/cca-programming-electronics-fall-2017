@@ -28,7 +28,7 @@ As a reminder, **please email me if you get stuck!** I am on email more than is 
    
    For your code, just using `mouseX` and `mouseY` for the `x` and `y` location of the ellipse should suffice -- no variable assignment necessary!
 
-3. Animate a single circle, starting at 100, 100, and moving right 3 pixels each frame. Should look something like this, though note that this gif repeats automatically (and your code doesn't have to). *Note that you will need a variable defined outside your `while (true)` loop in order to track location over time. See today's notes for the [cycling hue](../class-code/cycling-hue.js) example we wrote in class together.*
+3. Animate a single circle, starting at 100, 100, and moving right 10 pixels each frame. Should look something like this, though note that this gif repeats automatically (and your code doesn't have to). *Note that you will need a variable defined outside your `while (true)` loop in order to track location over time. See today's notes for the [cycling hue](../class-code/cycling-hue.js) example we wrote in class together.*
   
    ![single-circle](img/single-circle.gif)
 
