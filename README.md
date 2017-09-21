@@ -154,4 +154,6 @@ Together, we'll experiment with a few sketches to practice variables & functions
     }
     ```
     
+    You don't have to understand exactly how the code above works -- but do notice that **every single coordinate** parameter of every shape and line has `x` or `y` in it -- usually something added to `x` or `y` -- and that's so that every shape is drawn **relative to `(x, y)`**. That way, when I run `jdPatch(0,0)` or `jdPatch(100, 100)`, all my shapes are offset by the correct amount.
+    
 [Homework for Week 3](hw/week3.md)
