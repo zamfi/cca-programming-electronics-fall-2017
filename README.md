@@ -160,6 +160,11 @@ Together, we'll experiment with a few sketches to practice variables & functions
 
 ### Week 4: Wednesday, September 27, 2017
 
+Thanks to everyone who provided a patch for the class quilt!
+
+![quilt](img/class-quilt.png)
+
+
 Today, we'll practice loops:
 
 1.  Together, we'll make vertical lines:
