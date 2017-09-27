@@ -157,3 +157,114 @@ Together, we'll experiment with a few sketches to practice variables & functions
     You don't have to understand exactly how the code above works -- but do notice that **every single coordinate** parameter of every shape and line has `x` or `y` in it -- usually something added to `x` or `y` -- and that's so that every shape is drawn **relative to `(x, y)`**. That way, when I run `jdPatch(0,0)` or `jdPatch(100, 100)`, all my shapes are offset by the correct amount.
     
 [Homework for Week 3](hw/week3.md)
+
+### Week 4: Wednesday, September 27, 2017
+
+Today, we'll practice loops:
+
+1.  Together, we'll make vertical lines:
+    
+    ![vertical lines](img/vertical-lines.png)
+
+2.  Then, with a partner, you'll make horizontal lines:
+    
+    ![horizontal lines](img/horizontal-lines.png)
+    
+3.  Try these concentric circles too:
+    
+    ![concentric circles](img/concentric-circles.png)
+
+4.  And this cone:
+
+    ![cone of lines](img/cone-of-lines.png)
+    
+5.  Also this diamond:
+
+    ![diamond](img/diamond.png)
+    
+6.  What about these taller lines?
+    
+    ![doubles](img/doubles.png)
+    
+7.  For this you'll need a **loop within a loop**:
+    
+    ![artdeco](img/artdeco.png)
+
+8.  Now try this grid of circles; you'll need **nested loops** for this one too!
+    
+    ![circle grid](img/circle-grid.png)
+
+9.  **Challenge:** Using a technique called the "exponential moving average", we can create a smooth easing animation like this:
+    
+    ![easing position](img/easing-position.gif)
+    
+    The technique works by one variable to store intermediate values for another variable. For example, in the sketch above, the *x-* and *y-* coordinates of the circle are stored in variables `x` and `y`, which are **eased** to the target values given by `mouseX` and `mouseY`.
+    
+    "Exponential moving average" is a fancy way of saying: first, pick a fixed **rate** at which the easing occurs for a variable reaching its target. That rate controls how much impact the target has on the value each frame. For exampe, if the rate is 10%, then the new value each frame is 10% the target value and 90% the old value of the variable. Here's some sample code; the key is in the line `x = target*rate + x*(1-rate);`:
+    
+    ```javascript    
+    var rate = 0.1;
+    var x = 0;
+    var target = 100;
+    
+    while (true) {
+      ellipse(x, 100, 15, 15);
+      x = target*rate + x*(1-rate); // rate is 0.1, or 10% -- (1-rate) is 0.9, or 90%
+    }
+    ```
+    
+    Each frame, x gets 10% closer to its target.
+    
+    Modify this code to create a circle that follows the mouse as in the anigif above.
+
+
+
+#### Working with Loops
+
+Here's one way of working with loops, and figuring out how to turn a pattern into code:
+
+1. Write down the coordinates of the shapes you want to create in your loop.
+2. Find the pattern for those coordinates
+  a. Where does it start?
+  b. Where does it end?
+  c. How much does it change each time?
+3. Use that pattern in a for loop: `for (var i = START; i < END; i = i + CHANGE) { ... }`
+  
+For example, to create the following sketch:
+
+![triangle of lines](img/triangle.png)
+
+...start by writing down some endpoints for those lines:
+
+```
+(20, 20) -> (20, 20)
+(20, 30) -> (30, 20)
+(20, 40) -> (40, 20)
+(20, 50) -> (50, 20)
+(20, 60) -> (60, 20)
+(20, 70) -> (70, 20)
+(20, 80) -> (80, 20)
+.
+.
+.
+(20, 480) -> (480, 20)
+```
+
+...from these coordinates, we can find a pattern for each of the four parameters we need to draw a line:
+
+- `startX`: always 20
+- `startY`: starts at 20, ends at 480, goes up by 10 each time
+- `endX`: starts at 20, ends at 480, goes up by 10 each time
+- `endY`: always 20
+
+...from this pattern, we can generate a loop that draws these lines, by creating a variable that starts at `20`, ends at `480`, and goes up by `10` each time. We won't call the variable `x` or `y` beacuse we don't use it exclusively for either coordinate.
+
+```javascript
+for (var i = 20; i <= 480; i = i + 10) {
+  var startX = 20;
+  var startY = i;
+  var endX = i;
+  var endY = 20;
+  line(startX, startY, endX, endY);
+}
+```
