@@ -164,6 +164,7 @@ Thanks to everyone who provided a patch for the class quilt!
 
 ![quilt](img/class-quilt.png)
 
+#### Loops Workshop
 
 Today, we'll practice loops:
 
@@ -273,3 +274,5 @@ for (var i = 20; i <= 480; i = i + 10) {
   line(startX, startY, endX, endY);
 }
 ```
+
+[Homework for Week 4](hw/week4.md)
