@@ -276,3 +276,104 @@ for (var i = 20; i <= 480; i = i + 10) {
 ```
 
 [Homework for Week 4](hw/week4.md)
+
+### Week 5: Wednesday, October 4, 2017
+
+#### Homework Review
+
+Loops! And share your Sol LeWitt pieces.
+
+#### Objects & Functions Workshop
+
+Objects are collections of properties. They can help to keep related variables together. For example:
+
+```javascript
+var circle = {
+  x: 100, 
+  y: 100,
+  vx: 3,
+  vy: 4,
+  r: 10
+};
+
+var circle2 = {
+  x: 120, 
+  y: 160,
+  vx: 3,
+  vy: 4,
+  r: 10
+};
+
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255);
+  
+  paint(circle);
+  paint(circle2);
+  
+  move(circle);
+  move(circle2);
+  
+  bounce(circle);
+  bounce(circle2);
+}
+
+function paint(circle) {
+  ellipse(circle.x, circle.y, circle.r*2, circle.r*2);
+}
+
+function move(circle) {
+  circle.x += circle.vx; // circle.x = circle.x + circle.vx
+  circle.y += circle.vy;
+}
+
+function bounce(circle) {
+  if (circle.x > width || circle.x < 0) {
+    circle.vx = - circle.vx;
+  }
+  if (circle.y > height || circle.y < 0) {
+    circle.vy = - circle.vy;
+  }
+}
+
+```
+
+This code creates two objects: `circle` and `circle2`. Each of the `paint`, `move`, and `bounce` functions is defined to act on a single obejct; calling `paint(circle)` makes the function act on the first `circle` object, while calling `paint(circle2)` makes the function act on the second `circle2` object.
+
+"Act on" means that the `circle` variable inside the function actually refers to one of the `circle` or `circle2` objects defined at the top of the code. Which one it refers to depends on whether it was called with `circle` or `circle2` as the parameter.
+
+**Exercise 1**: Add a third circle object.
+
+**Exercise 2**: Add a property to each circle that holds a color.
+
+**Exercise 2a**: Use that property in the `paint` function to draw each circle using its color property.
+
+Next, modify the initial locations -- the `x` and `y` properties of `circle` and `circle2` so both circles start at the bottom of the canvas:
+
+```javascript
+var circle = {
+  x: 100, 
+  y: 400,
+  vx: 0,
+  vy: -4,
+  r: 10
+};
+
+var circle2 = {
+  x: 160, 
+  y: 400,
+  vx: 0,
+  vy: -4,
+  r: 10
+};
+```
+
+**Exercise 3**: Modify the `bounce` function so that, instead of bouncing, the two circles each reset to the bottom of the canvas when they reach the top.
+
+**Exercise 4**: Modify the `move` function so that the circles (now bubbles!) vibrate in the `x` direction each frame.
+
+**Exercise 5**: Add some interactivity -- use the `keyPressed` function to make the up (and down) arrow keys increase (and decrease) the rate at which the bubbles rise.
