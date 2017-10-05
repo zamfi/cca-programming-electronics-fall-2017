@@ -283,6 +283,60 @@ for (var i = 20; i <= 480; i = i + 10) {
 
 Loops! And share your Sol LeWitt pieces.
 
+On nested loops in particular; given the following sketch:
+
+![circle grid](img/circle-grid.png)
+
+...it's not necessarily obvious how we might craete this grid. One way to think about it is to first write a function that draws a column (vertical line) of circles at a given x coordinate, perhaps this code:
+
+```javascript
+function lineOfCircles(x) {
+  var y = 20;
+  while (y < height) {
+    ellipse(x, y, 15, 15);
+    y = y + 20;
+  }
+}
+```
+
+...and then we can use that function inside its own for loop to draw a column of circles every 20 pixels. Full sketch:
+
+```javascript
+background(0);
+fill(255);
+
+function lineOfCircles(x) {
+  var y = 20;
+  while (y < height) {
+    ellipse(x, y, 15, 15);
+    y = y + 20;
+  }
+}
+
+var x = 20;
+while (x < width) {
+  lineOfCircles(x);
+  x = x + 20;
+}
+```
+
+The `lineOfCircles` function is in fact entirely optional: we could replace the call to `lineOfCircles(x)` with the function contents exactly, and end up with essentially the same code!
+
+```javascript
+background(0);
+fill(255);
+
+var x = 20;
+while (x < width) {
+  var y = 20;
+  while (y < height) {
+    ellipse(x, y, 15, 15);
+    y = y + 20;
+  }
+  x = x + 20;
+}
+```
+
 #### Objects & Functions Workshop
 
 Objects are collections of properties. They can help to keep related variables together. For example:
@@ -323,7 +377,7 @@ function draw() {
 }
 
 function paint(circle) {
-  ellipse(circle.x, circle.y, circle.r*2, circle.r*2);
+  ellipse(circle.x, circle.y, circle.r * 2, circle.r * 2);
 }
 
 function move(circle) {
@@ -377,3 +431,132 @@ var circle2 = {
 **Exercise 4**: Modify the `move` function so that the circles (now bubbles!) vibrate in the `x` direction each frame.
 
 **Exercise 5**: Add some interactivity -- use the `keyPressed` function to make the up (and down) arrow keys increase (and decrease) the rate at which the bubbles rise.
+
+In class, we extnded the code above using **arrays** (aka **lists**):
+
+```javascript
+var circles = [];
+
+function setup() {
+  createCanvas(400, 400);
+
+  var count = 0;
+  while (count < 100) {
+    circles.push({
+      x: random(width),
+      y: random(height),
+      vx: random(-3, 3),
+      vy: random(-3, 3),
+      r: 10,
+      h: random(360)
+    });
+    count = count + 1;
+  }
+}
+
+function draw() {
+  background(255);
+  noStroke();
+
+  circles.forEach(paint);
+  circles.forEach(move);
+  circles.forEach(bounce);
+}
+
+function paint(circle) {
+  colorMode(HSB);
+  fill(circle.h, 100, 100);
+  ellipse(circle.x, circle.y, circle.r * 2, circle.r * 2);
+}
+
+function move(circle) {
+  circle.x += circle.vx; // circle.x = circle.x + circle.vx
+  circle.y += circle.vy;
+}
+
+function bounce(circle) {
+  if (circle.x > width || circle.x < 0) {
+    circle.vx = -circle.vx;
+  }
+  if (circle.y > height || circle.y < 0) {
+    circle.vy = -circle.vy;
+  }
+}
+```
+
+`circles.push` adds a new circle to the list, and `circles.forEach` runs a function for each circle object.
+
+We also made a fancy, "champagne" version of this code in class:
+
+```processing
+var circles = [];
+
+function setup() {
+  createCanvas(400, 400);
+  var count = 0;
+  while (count < 20) {
+    circles.push({
+      x: random(width),
+      y: height,
+      vx: 0,
+      vy: random(4),
+      r: random(4,10),
+      h: random(360)
+    });
+    count = count + 1;
+  }
+}
+
+function mouseDragged() {
+  circles.push({
+      x: mouseX,
+      y: mouseY,
+      vx: 10,
+      vy: -random(4),
+      r: random(4,10),
+      h: random(360)
+    });
+}
+
+function draw() {
+  background(255);
+  noStroke();
+
+  circles.forEach(paint);
+  circles.forEach(move);
+  circles.forEach(bounce);
+}
+
+function isClickedOn(circle) {
+  if (dist(mouseX, mouseY, circle.x, circle.y) < circle.r) {
+    circle.r = 0;
+  }
+}
+
+function mousePressed() {
+  circles.forEach(isClickedOn);
+}
+
+function paint(circle) {
+  colorMode(HSB);
+  fill(circle.h, 100, 100);
+  ellipse(circle.x, circle.y, circle.r*2, circle.r*2);
+}
+
+function move(circle) {
+  circle.x += random(-10, 10); // vibration
+  circle.x += circle.vx; // circle.x = circle.x + circle.vx
+  circle.y += circle.vy;
+}
+
+function bounce(circle) {
+  if (circle.x > width || circle.x < 0) {
+    circle.vx = - circle.vx;
+  }
+  if (circle.y > height || circle.y < 0) {
+    circle.vy = - circle.vy;
+  }
+}
+```
+
+[Homework for Week 5](hw/week5.md)
