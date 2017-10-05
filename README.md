@@ -488,7 +488,7 @@ function bounce(circle) {
 
 We also made a fancy, "champagne" version of this code in class:
 
-```processing
+```javascript
 var circles = [];
 
 function setup() {
@@ -511,7 +511,7 @@ function mouseDragged() {
   circles.push({
       x: mouseX,
       y: mouseY,
-      vx: 10,
+      vx: 0,
       vy: -random(4),
       r: random(4,10),
       h: random(360)
@@ -544,7 +544,7 @@ function paint(circle) {
 }
 
 function move(circle) {
-  circle.x += random(-10, 10); // vibration
+  circle.x += random(-2, 2); // vibration
   circle.x += circle.vx; // circle.x = circle.x + circle.vx
   circle.y += circle.vy;
 }
