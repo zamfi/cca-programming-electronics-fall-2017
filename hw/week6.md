@@ -105,7 +105,7 @@ function checkFoodReached() {
     foodLocation.x = SNAKE_BLOCK_SIZE * floor(random(width / SNAKE_BLOCK_SIZE));
     foodLocation.y = SNAKE_BLOCK_SIZE * floor(random(height / SNAKE_BLOCK_SIZE));
 		
-		// make the snake longer!
+    // make the snake longer!
     extendSnake();
   }
 }
