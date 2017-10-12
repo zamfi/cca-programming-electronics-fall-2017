@@ -560,3 +560,213 @@ function bounce(circle) {
 ```
 
 [Homework for Week 5](hw/week5.md)
+
+
+### Week 6: Wednesday, October 11, 2017
+
+In class today, we reviewed the homework, focusing on objects and arrays.
+
+Then we discussed how one could develop the classic small-screen game [Snake](https://www.youtube.com/watch?v=DgrwX5Ypn3Q), breaking the game down into **data**, **rendering**, **simulation**, and **events**:
+
+**Data**:
+- **x, y for snake head**
+- x, y for snake body segments
+- **direction**
+- **food locations** (random?)
+- score
+- speed
+
+**Rendering**:
+- **background**
+- **snake**
+- **food**
+- score
+- boundaries
+
+**Simulation**:
+- **snake moves**
+- snake grows
+- game over?
+
+**Events**:
+- **snake head reaches food**
+- **user presses arrow key**
+- boundary collision
+
+For **data**, your goal is to create a computational representation of what you need for your program. I recommend starting here. Use dummy data to start, just so that you have something to render.
+
+Next, implement **rendering** so you have something to see. Not only is it motivating to see your code in action, but you can also often identify early bugs in this stage.
+
+Then move on to **simulation** and **events**. This is usually the hardest part, but having your data and rendering set will make sure you're ont he right path.
+
+In class together, we implemented the bolded pieces above, and came up with the following:
+
+```javascript
+var SNAKE_BLOCK_SIZE = 20;
+
+var snakeHead = {
+  x: 100,
+  y: 100
+}
+
+var snakeDirection = "right"; // or "down", etc.
+
+var foodLocation = {
+  x: 200,
+  y: 200
+}
+
+function setup() {
+  createCanvas(400, 400);
+  frameRate(1);
+}
+
+function draw() {
+  background(0);
+
+  moveSnake();
+  checkFoodReached();
+
+	// draw snake head
+  noStroke();
+  fill(255);
+  rectMode(CENTER);
+  rect(snakeHead.x, snakeHead.y, SNAKE_BLOCK_SIZE, SNAKE_BLOCK_SIZE);
+
+	// draw food location
+  ellipse(foodLocation.x, foodLocation.y, SNAKE_BLOCK_SIZE, SNAKE_BLOCK_SIZE);
+}
+
+function moveSnake() {
+  if (snakeDirection == "up") {
+    snakeHead.y = snakeHead.y - SNAKE_BLOCK_SIZE;
+  } else if (snakeDirection == "down") {
+    snakeHead.y = snakeHead.y + SNAKE_BLOCK_SIZE;
+  } else if (snakeDirection == "left") {
+    snakeHead.x = snakeHead.x - SNAKE_BLOCK_SIZE;
+  } else if (snakeDirection == "right") {
+    snakeHead.x = snakeHead.x + SNAKE_BLOCK_SIZE;
+  }
+}
+
+function keyPressed() {
+  if (keyCode == UP_ARROW) {
+    snakeDirection = "up";
+  } else if (keyCode == DOWN_ARROW) {
+    snakeDirection = "down";
+  } else if (keyCode == RIGHT_ARROW) {
+    snakeDirection = "right";
+  } else if (keyCode == LEFT_ARROW) {
+    snakeDirection = "left";
+  }
+}
+
+function checkFoodReached() {
+  if (dist(snakeHead.x, snakeHead.y, foodLocation.x, foodLocation.y) == 0) {
+    foodLocation.x = SNAKE_BLOCK_SIZE * floor(random(width / SNAKE_BLOCK_SIZE));
+    foodLocation.y = SNAKE_BLOCK_SIZE * floor(random(height / SNAKE_BLOCK_SIZE));
+  }
+}
+```
+
+I took the liberty of implementing the snake body using an array. Read over this code and try to follow along!
+
+```javascript
+var SNAKE_BLOCK_SIZE = 20;
+
+var snakeHead = {
+  x: 100,
+  y: 100
+}
+var snakeSegments = [];
+
+var snakeDirection = "right"; // or "down", etc.
+
+var foodLocation = {
+  x: 200,
+  y: 200
+}
+
+function setup() {
+  createCanvas(400, 400);
+  frameRate(2);
+  
+  // add 2 segments
+  extendSnake();
+  extendSnake();
+  
+  background(0);
+  drawSegment(snakeHead);
+}
+
+function draw() {
+  background(0);
+
+  moveSnake();
+  checkFoodReached();
+
+	// draw snake head
+	drawSegment(snakeHead);
+  	
+  // draw snake body
+  snakeSegments.forEach(drawSegment);
+  
+	// draw food location
+  ellipse(foodLocation.x, foodLocation.y, SNAKE_BLOCK_SIZE, SNAKE_BLOCK_SIZE);
+}
+
+function drawSegment(segment) {
+  noStroke();
+  fill(255);
+  rectMode(CENTER);
+  rect(segment.x, segment.y, SNAKE_BLOCK_SIZE, SNAKE_BLOCK_SIZE);
+}  
+
+function moveSnake() {
+  // add snakeHead to front of segments array
+  snakeSegments.unshift({x: snakeHead.x, y: snakeHead.y});
+  // remove last element of the segments array
+  snakeSegments.pop();
+  
+  if (snakeDirection == "up") {
+    snakeHead.y = snakeHead.y - SNAKE_BLOCK_SIZE;
+  } else if (snakeDirection == "down") {
+    snakeHead.y = snakeHead.y + SNAKE_BLOCK_SIZE;
+  } else if (snakeDirection == "left") {
+    snakeHead.x = snakeHead.x - SNAKE_BLOCK_SIZE;
+  } else if (snakeDirection == "right") {
+    snakeHead.x = snakeHead.x + SNAKE_BLOCK_SIZE;
+  }
+}
+
+function keyPressed() {
+  if (keyCode == UP_ARROW) {
+    snakeDirection = "up";
+  } else if (keyCode == DOWN_ARROW) {
+    snakeDirection = "down";
+  } else if (keyCode == RIGHT_ARROW) {
+    snakeDirection = "right";
+  } else if (keyCode == LEFT_ARROW) {
+    snakeDirection = "left";
+  }
+}
+
+function extendSnake() {
+  // get the last segment -- or the head segment if there aren't any segments
+  var lastSegment = snakeSegments[snakeSegments.length-1] || snakeHead;
+  // duplicate last segment
+  snakeSegments.push({x: lastSegment.x, y: lastSegment.y}); 
+}
+
+function checkFoodReached() {
+  if (dist(snakeHead.x, snakeHead.y, foodLocation.x, foodLocation.y) == 0) {
+    foodLocation.x = SNAKE_BLOCK_SIZE * floor(random(width / SNAKE_BLOCK_SIZE));
+    foodLocation.y = SNAKE_BLOCK_SIZE * floor(random(height / SNAKE_BLOCK_SIZE));
+    extendSnake();
+  }
+}
+```
+
+We'll work with this code a bit in the homework.
+
+[Homework for Week 6](hw/week6.md)
