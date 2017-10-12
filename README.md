@@ -627,13 +627,13 @@ function draw() {
   moveSnake();
   checkFoodReached();
 
-	// draw snake head
+  // draw snake head
   noStroke();
   fill(255);
   rectMode(CENTER);
   rect(snakeHead.x, snakeHead.y, SNAKE_BLOCK_SIZE, SNAKE_BLOCK_SIZE);
 
-	// draw food location
+  // draw food location
   ellipse(foodLocation.x, foodLocation.y, SNAKE_BLOCK_SIZE, SNAKE_BLOCK_SIZE);
 }
 
@@ -705,13 +705,13 @@ function draw() {
   moveSnake();
   checkFoodReached();
 
-	// draw snake head
-	drawSegment(snakeHead);
-  	
+  // draw snake head
+  drawSegment(snakeHead);
+    
   // draw snake body
   snakeSegments.forEach(drawSegment);
   
-	// draw food location
+  // draw food location
   ellipse(foodLocation.x, foodLocation.y, SNAKE_BLOCK_SIZE, SNAKE_BLOCK_SIZE);
 }
 

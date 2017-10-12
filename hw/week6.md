@@ -47,13 +47,13 @@ function draw() {
   moveSnake();
   checkFoodReached();
 
-	// draw snake head
-	drawSegment(snakeHead);
-  	
+  // draw snake head
+  drawSegment(snakeHead);
+    
   // draw snake body
   snakeSegments.forEach(drawSegment);
   
-	// draw food location
+  // draw food location
   ellipse(foodLocation.x, foodLocation.y, SNAKE_BLOCK_SIZE, SNAKE_BLOCK_SIZE);
 }
 
@@ -104,7 +104,7 @@ function checkFoodReached() {
   if (dist(snakeHead.x, snakeHead.y, foodLocation.x, foodLocation.y) == 0) {
     foodLocation.x = SNAKE_BLOCK_SIZE * floor(random(width / SNAKE_BLOCK_SIZE));
     foodLocation.y = SNAKE_BLOCK_SIZE * floor(random(height / SNAKE_BLOCK_SIZE));
-		
+    
     // make the snake longer!
     extendSnake();
   }
@@ -114,8 +114,8 @@ function checkFoodReached() {
 Modify the code as follows:
 
 1. **Assignment**: Add a score! What data will you need? How will you render it? (Check the reference for the [`text` command](https://p5js.org/reference/#/p5/text).)
-	 
-	 What event causes the score to increase? (And is there already a function that's triggered by this event?)
+   
+   What event causes the score to increase? (And is there already a function that's triggered by this event?)
 
 2. **Assignment**: Add boundaries! The simple version of this uses the sides of the canvas as boundary, so start there. You're creating a new event: hitting the boundary. How do you detect this event? What actions do you take in response?
    
