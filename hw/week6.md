@@ -4,6 +4,8 @@ Two parts this week: some art inspiration and extending Snake! Both due Sunday.
 
 #### Art Inspiration
 
+Create some sketches inspired by established artists in other media!
+
 **Assignment**: Create three sketches inspired by the colors and patterns of [Dan Flavin's neon pieces](https://www.google.com/search?tbm=isch&as_q=Dan+Flavin).
 
 **Assignment**: Create three sketches inspired by the colors and patterns of [Frank Stella's paintings](https://www.google.com/search?tbm=isch&as_q=Frank+Stella). **Use loops!**
