@@ -772,3 +772,77 @@ function checkFoodReached() {
 We'll work with this code a bit in the homework.
 
 [Homework for Week 6](hw/week6.md)
+
+### Week 7: Wednesday, October 18, 2017
+
+Advanced Topics!
+
+Today we'll aim to cover some advanced topics. One possibility: extending a keyboard music player, starting with the following code:
+
+```javascript
+var frequencies = {
+  L: 392,
+  K: 349,
+  J: 330,
+  H: 294,
+  G: 261,
+  F: 246,
+  D: 220,
+  S: 196,
+  A: 174
+};
+var oscillators = {};
+var playing = false;
+
+function setup() {
+  backgroundColor = color(255, 0, 255);
+  textAlign(CENTER);
+}
+
+function getOscillator(k) {
+  if (!oscillators[k] && frequencies[k]) {
+    let osc = new p5.Oscillator();
+    osc.setType('triangle');
+    osc.freq(frequencies[k]);
+    osc.amp(0);
+    osc.start();
+    oscillators[k] = osc;
+  }
+  return oscillators[k];
+}
+
+function draw() {
+  background(backgroundColor)
+  text('click to play', width / 2, height / 2);
+}
+
+function keyPressed() {
+  print("got key press for ", key);
+  let osc = getOscillator(key);
+  if (osc) {
+    osc.amp(0.5, 0.1);
+    playing = true;
+    backgroundColor = color(0, 255, 255);
+  }
+}
+
+function keyReleased() {
+  print("got key release for ", key);
+  let osc = getOscillator(key);
+  if (osc) {
+    osc.amp(0, 0.5);
+    playing = false;
+    backgroundColor = color(255, 0, 255);
+  }
+}
+```
+
+Right now, there's no visual indicator of what note(s) are playing. Fix that! Some possibilities include:
+
+1. Display, as text on the canvas, the most-recently played note.
+
+2. Enlarge the canvas; then, draw a rectangle for each key. When playing the note for a given key, highlight that key's rectangle in some way.
+
+3. Associate a color with each note. When you press a given key, add the color to the canvas in some way.
+
+4. Create a randomly-positioned circle for each pressed note; show it when they key is pressed, hide it when the key is released.
