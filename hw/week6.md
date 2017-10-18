@@ -121,6 +121,6 @@ Modify the code as follows:
 
 2. **Assignment**: Add boundaries! The simple version of this uses the sides of the canvas as boundary, so start there. You're creating a new event: hitting the boundary. How do you detect this event? What actions do you take in response?
    
-   The [`noLoop` command](https://p5js.org/reference/#/p5/noLoop) will help you stop the game from continunion to run.
+   The [`noLoop` command](https://p5js.org/reference/#/p5/noLoop) will help you stop the game from continuing to run.
 
 3. **Challenge**: Detect when the snake head hits the snake body and end the game then too!
