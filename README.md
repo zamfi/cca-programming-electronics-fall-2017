@@ -847,3 +847,5 @@ Right now, there's no visual indicator of what note(s) are playing. Fix that! So
 3. Associate a color with each note. When you press a given key, add the color to the canvas in some way.
 
 4. Create a randomly-positioned circle for each pressed note; show it when they key is pressed, hide it when the key is released.
+
+[Homework for Week 7](hw/week7.md)
