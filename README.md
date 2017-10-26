@@ -849,3 +849,12 @@ Right now, there's no visual indicator of what note(s) are playing. Fix that! So
 4. Create a randomly-positioned circle for each pressed note; show it when they key is pressed, hide it when the key is released.
 
 [Homework for Week 7](hw/week7.md)
+
+
+### Week 8: Wednesday, October 25, 2017
+
+In class today, we fisrt discussed some strategies for using `print` to debug code in p5.js. 
+
+Then, we introduced Arduino. I've uploaded [the slides we covered](arduino-intro.pdf).
+
+[Homework for Week 8](hw/week8.md)
