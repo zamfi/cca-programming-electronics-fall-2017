@@ -15,12 +15,12 @@
 
 1. In the README.md file for this week's homework GitHub repository, answer the following questions from this week's readings: 
 
-  a. What line of code waits one and a half seconds? 
+   a. What line of code waits one and a half seconds? 
 
-  b. Why does a resistor need an LED? 
+   b. Why does a resistor need an LED? 
 
-  c. Why is a breadboard useful?
+   c. Why is a breadboard useful?
 
-  d. Identify at least least 2 things you did not understand from the reading 
+   d. Identify at least least 2 things you did not understand from the reading 
 
 1. Complete another challenge problem from an earlier homework, and submit it in this homework assignment as `challenge.js`, making sure to indicate in a `// comment` which homework it's from and what the assignment is.
