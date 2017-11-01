@@ -853,8 +853,18 @@ Right now, there's no visual indicator of what note(s) are playing. Fix that! So
 
 ### Week 8: Wednesday, October 25, 2017
 
-In class today, we fisrt discussed some strategies for using `print` to debug code in p5.js. 
+In class today, we first discussed some strategies for using `print` to debug code in p5.js. 
 
 Then, we introduced Arduino. I've uploaded [the slides we covered](arduino-intro.pdf).
 
 [Homework for Week 8](hw/week8.md)
+
+
+### Week 9: Wednesday, November 1, 2017
+
+In class today, we'll build little cars with Arduino and the motors in your kit.
+
+First, we'll create [this schematic](schematic-instructions.pdf) twice, once for each motor. Note that the two circuits should share 5V and ground, but nothing else!
+
+Then, attach your motors, breadboard, and Arduino to your cardboard chassis, using whatever materials suit you.
+
