@@ -8,9 +8,9 @@ In this week's assignment, you'll learn about `analogWrite` a bit and then compl
 
 2. Optional: If you are curious about PWM read [this explanation](https://www.arduino.cc/en/Tutorial/PWM).
 
-3. Follow [this tutorial](https://www.arduino.cc/en/Tutorial/AnalogInOutSerial) to use a potentiometer to control the brightness of an LED.
+3. Make sure to keep your transistors & motors on your board, and follow [this tutorial](https://www.arduino.cc/en/Tutorial/AnalogInOutSerial) to use a potentiometer to control the brightness of an LED. Upload a picture of your breadboard to GitHub.
 
-4. Answer these questions, and upload them to your Github repository:
+4. Answer these questions, and upload them to your GitHub repository:
 
    1. Why can you only use certain pins for `analogWrite()`?
 
