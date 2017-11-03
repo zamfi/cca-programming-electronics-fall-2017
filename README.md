@@ -868,3 +868,4 @@ First, we'll create [this schematic](schematic-instructions.pdf) twice, once for
 
 Then, attach your motors, breadboard, and Arduino to your cardboard chassis, using whatever materials suit you.
 
+[Homework for Week 9](hw/week9.md)
