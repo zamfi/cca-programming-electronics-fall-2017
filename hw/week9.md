@@ -1,6 +1,6 @@
 ### Homework 9 (due Tuesday, November 7, 2017)
 
-In this week's assignment, you'll learn about `analogWrite` a bit and then complete a practice quiz. (The in-class quiz will be in two weeks during week 10, on November 15. If you already that know you won't be in class that day, please get in touch with me ASAP!)
+In this week's assignment, you'll learn about `analogWrite` a bit and then complete a practice quiz. (The in-class quiz will be in two weeks during week 11, on November 15. If you already that know you won't be in class that day, please get in touch with me ASAP!)
 
 #### Learn about `analogWrite()`
 
