@@ -869,3 +869,44 @@ First, we'll create [this schematic](schematic-instructions.pdf) twice, once for
 Then, attach your motors, breadboard, and Arduino to your cardboard chassis, using whatever materials suit you.
 
 [Homework for Week 9](hw/week9.md)
+
+### Week 10: Wednesday, November 8, 2017
+
+In class today, we'll review the practice quiz. Then we'll build off of last week's car by creating an input interface "controller".
+
+There are many possible ways to control a car. You can use a potentiometer to control steering, for example, and use buttons or capacitive touch pads to increase or decrease speed.
+
+Here's some code to get you started:
+
+```arduino
+// motor pins
+int leftMotorPin = 3;
+int rightMotorPin = 6;
+
+// motor speeds
+int leftMotorSpeed = 0; // maximum speed: 255
+int rightMotorSpeed = 0; // maximum speed: 255
+
+// set up pins to be output pins
+void setup() {
+  pinMode(leftMotorPin, OUTPUT);
+  pinMode(rightMotorPin, OUTPUT);
+}
+
+// read sensor, adjust & set speeds
+void loop() {
+  // let's get the sensor value first...
+  int sensorValue = analogRead(A0);
+
+  // then, do something with that value to change the speeds. for example, 
+  //  leftMotorSpeed = 127 + map(sensorValue, 0, 1023, -127, 127);
+  //  rightMotorSpeed = 127 + map(sensorValue, 0, 1028, 127, -127);
+
+  analogWrite(leftMotorPin, leftMotorSpeed);
+  analogWrite(rightMotorPin, rightMotorSpeed);
+
+  delay(10); // give the arduino a break
+}
+```
+
+You'll need to modify the code above to do something useful!
