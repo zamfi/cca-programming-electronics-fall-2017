@@ -909,4 +909,4 @@ void loop() {
 }
 ```
 
-You'll need to modify the code above to do something useful!
+You'll need to conect sensors to the appropriate pins and modify the code above to do something useful!
