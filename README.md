@@ -872,7 +872,14 @@ Then, attach your motors, breadboard, and Arduino to your cardboard chassis, usi
 
 ### Week 10: Wednesday, November 8, 2017
 
-In class today, we'll review the practice quiz. Then we'll build off of last week's car by creating an input interface "controller".
+In class today, we first reviewed the practice quiz, then we discussed final project ideas.
+
+[Homework for Week 10](hw/week10.md)
+
+
+### Week 11: Wednesday, November 15, 2017
+
+Today, we'll start with the in-class quiz, and then we'll build off of the car we started two weeks ago by creating an input interface "controller".
 
 There are many possible ways to control a car. You can use a potentiometer to control steering, for example, and use buttons or capacitive touch pads to increase or decrease speed.
 
