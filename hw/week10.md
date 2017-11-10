@@ -1,4 +1,4 @@
-### Homework 9 (due Monday, November 13, 2017)
+### Homework 10 (due Monday, November 13, 2017)
 
 Prepare for next week's in-class quiz, on Wednesday, November 15. As a reminder, here are the rules and expectations for the quiz:
 
