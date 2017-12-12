@@ -917,3 +917,8 @@ void loop() {
 ```
 
 You'll need to conect sensors to the appropriate pins and modify the code above to do something useful!
+
+
+### Week 15: Wednesday, December 12, 2017
+
+Final presentations! Make sure to create [documentation of your work](hw/final.md).
