@@ -4,7 +4,7 @@ Your final project, and this course, are nearly complete. Congratulations!
 
 As your final act (and in order to pass the course!) you must provide appropriate documentation for your final project. Follow these instructions.
 
-1. For my [github repository](https://github.com/zamfi/p-and-e-final-project-fall-2017) called "p-and-e-final-project-fall-2017". Follow that link, and click the "fork" button. Your repository must be called this, or I won't see it!
+1. Fork my [github repository](https://github.com/zamfi/p-and-e-final-project-fall-2017) called "p-and-e-final-project-fall-2017". Follow that link, and click the "fork" button. Your repository must be called this, or I won't see it!
 
 2. Modify the README.md file so that it describes **your project**, and not some weird sample project with questions for answers. Your main goal is to enable future students to be able to reconstruct your project. Make sure you include any gotchas you found or other insights you had along the way!
 
